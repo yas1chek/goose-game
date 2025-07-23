@@ -5,4 +5,5 @@ Score as many points as you can, while avoiding rockets.
 Use arrows to control.
 
 ## Screenshots
-![Gameplay](https://raw.githubusercontent.com/yas1chek/goose-game/refs/heads/main/Screenshots/gameplay.png)
+![Gameplay 1](https://raw.githubusercontent.com/yas1chek/goose-game/refs/heads/main/Screenshots/gameplay.png)
+![Gameplay 2](https://raw.githubusercontent.com/yas1chek/goose-game/refs/heads/main/Screenshots/gameplay-2.png)
