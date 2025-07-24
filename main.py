@@ -4,8 +4,8 @@ import os
 import random
 
 #window size:
-H = 700
-W = 1250
+H = 720
+W = 1280
 
 #colour constants:
 WHITE = (255,255,255)
@@ -21,16 +21,16 @@ FONT = pygame.font.SysFont("verdana", 20)
 FPS = pygame.time.Clock()
 
 #background settings:
-bg = pygame.transform.scale(pygame.image.load("background.png"), (W, H))
+bg = pygame.transform.scale(pygame.image.load("images/background.png"), (W, H))
 bgX1 = 0
 bgX2 = bg.get_width()
 bgMove = 3
 
 #player settings:
-IMAGE_PATH = "Goose"
+IMAGE_PATH = "images/Goose"
 PLAYER_IMAGES = os.listdir(IMAGE_PATH)
 playerSize = (20, 20)
-player = pygame.image.load("player.png").convert_alpha()
+player = pygame.image.load("images/player.png").convert_alpha()
 playerRect = player.get_rect()
 #player control:
 playerMoveDown = [0, 4]
@@ -41,7 +41,7 @@ playerMoveLeft = [-4, 0]
 #enemy settings & random spawn:
 def createEnemy():
     enemySize = (30, 30)
-    enemy = pygame.image.load("enemy.png").convert_alpha()
+    enemy = pygame.image.load("images/enemy.png").convert_alpha()
     enemyRect = pygame.Rect(W, random.randint(50, H-70), *enemySize)
     enemyMove = [random.randint(-8,-4), 0]
     return [enemy, enemyRect, enemyMove]
@@ -53,7 +53,7 @@ enemies = []
 #bonus settings & random spawn:
 def createBonus():
     bonusSize = (10, 10)
-    bonus = pygame.image.load("bonus.png").convert_alpha()
+    bonus = pygame.image.load("images/bonus.png").convert_alpha()
     bonusRect = pygame.Rect(random.randint(20, W-70), 40, *bonusSize)
     bonusMove = [0, random.randint(2, 6)]
     return [bonus, bonusRect, bonusMove]
